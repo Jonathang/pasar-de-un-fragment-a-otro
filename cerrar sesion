@@ -1,0 +1,8 @@
+         salirsesion = vista.findViewById(R.id.tv_salir);
+         salirsesion.setOnClickListener(new View.OnClickListener() {
+             @Override
+              public void onClick(View view) {
+                 Intent i = new Intent(getActivity(), MainActivity.class);
+                 startActivity(i);
+              }
+        });
