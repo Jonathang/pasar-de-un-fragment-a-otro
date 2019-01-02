@@ -1,0 +1,11 @@
+        enlacegrupo = vista.findViewById(R.id.tv_perfilcreagrupo);
+        enlacegrupo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                Grupos2 llf = new Grupos2();
+                ft.replace(R.id.contenedor, llf);
+                ft.commit();
+            }
+        });
