@@ -1,4 +1,4 @@
- public void PantallaRegistro() {
+  //EN UNA ACTIVITY
         TextView registro = findViewById(R.id.tv_registrate);
 
         registro.setOnClickListener(new View.OnClickListener() {
@@ -8,4 +8,19 @@
                 startActivity(i);
             }
         });
-    }
+    
+    
+    
+    //EN UN FRAGMENT
+    registratunegocio = vista.findViewById(R.id.tvregistratunegocio);
+
+    registratunegocio.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            FragmentManager fm = getFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            RegistraNegocio llf = new RegistraNegocio();
+            ft.replace(R.id.contenedor, llf);
+            ft.commit();
+        }
+    });
